@@ -1,72 +1,69 @@
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-button,
-.button {
-  margin-bottom: 1rem;
-}
 
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  font-family: $button-font;
-  font-weight: $button-font-weight;
+/* Base styling shared by inputs too */
+@mixin btn-base() {
+  font-family: $btn-font;
+  font-weight: $btn-font-weight;
   display: inline-block;
-  height: 38px;
+  height: $btn-size;
   padding: 0 30px;
-  color: $button-color;
   text-align: center;
-  font-size: 11px;
-  line-height: 38px;
-  letter-spacing: .1rem;
+  font-size: $btn-font-size;
+  line-height: $btn-size;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid $button-border-color;
+  border-radius: $base-radius;
   cursor: pointer;
-  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
 }
 
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: darken($button-color, 20%);
-  border-color: darken($button-color, 20%);
-  outline: 0;
+/* Input buttons */
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  @include btn-base;
+  // Note: No margin is set here.
+  // The margin is set on the input
+  // elements in _form.scss
 }
 
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-  color: #FFF;
-  background-color: $primary;
-  border-color: $primary;
+button {
+  @include btn-base;
+  margin-bottom: $base-spacing;
 }
 
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: darken($primary, 10%);
-  border-color: darken($primary, 10%);
+/* Button Generator */
+@mixin btn-gen($color, $bg, $border, $color-h, $bg-h, $border-h) {
+  @include btn-base;
+  color: $color;
+  background-color: $bg;
+  border: 1px solid $border;
+
+  &:hover,
+  &:focus {
+    color: $color-h;
+    background-color: $bg-h;
+    border-color: $border-h;
+  }
+}
+
+
+/* Basic button */
+button,
+.btn {
+  @include btn-gen($btn-color, $btn-bg, $btn-border,
+                   $btn-color-h, $btn-bg-h, $btn-border-h);
+}
+/* Primary Button */
+.btn--primary {
+  @include btn-gen($btn-prim-color, $btn-prim-bg, $btn-prim-border,
+                   $btn-prim-color-h, $btn-prim-bg-h, $btn-prim-border-h);
 }

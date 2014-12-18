@@ -3,39 +3,55 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Colours */
-$primary: #3498db;
+$primary                : #3498db;
 
-$lighter-grey: #ecf0f1;
-$light-grey: #bdc3c7;
-$dark-grey: #95a5a6;
-$black: #222;
+$lighter-grey           : #ecf0f1;
+$light-grey             : #bdc3c7;
+$dark-grey              : #95a5a6;
+$black                  : #222;
 
 /* Body */
-$body-font: 'Droid Serif', serif;
-$body-font-weight: 400;
-$body-color: $black;
+$body-font              : 'Droid Serif', serif;
+$body-font-weight       : 400;
+$body-color             : $black;
 
 /* Headings */
-$header-font: 'Montserrat', sans-serif;
-$header-font-weight: 700;
+$header-font            : 'Montserrat', sans-serif;
+$header-font-weight     : 700;
+
+/* Base Metrics */
+$base-spacing           : 1rem;
+$base-radius            : 4px;
 
 /* Buttons */
-$button-font: $header-font;
-$button-font-weight: 400;
-$button-color: $dark-grey;
-$button-bg-color: #95a5a6;
-$button-border-color: $dark-grey;
+$btn-font               : $header-font;
+$btn-font-weight        : 400;
+$btn-font-size          : 11px;
+$btn-size               : 38px;
+// Basic
+$btn-color              : $dark-grey;
+$btn-bg                 : rgba(0, 0, 0, 0);
+$btn-border             : $dark-grey;
+$btn-color-h            : darken($btn-color, 20%);
+$btn-bg-h               : rgba(0, 0, 0, 0);
+$btn-border-h           : darken($btn-border, 20%);
+// Primary
+$btn-prim-color         : #fff;
+$btn-prim-bg            : $primary;
+$btn-prim-border        : $primary;
+$btn-prim-color-h       : $btn-prim-color;
+$btn-prim-bg-h          : darken($btn-prim-bg, 5%);
+$btn-prim-border-h      : darken($btn-prim-border, 5%);
 
 
 /* Media Queries */
-
 // Larger than mobile
-$xs: 400px;
+$xs                     : 400px;
 // Larger than phablet (also point when grid becomes active)
-$sm: 550px;
+$sm                     : 550px;
 // Larger than tablet
-$md: 750px;
+$md                     : 750px;
 // Larger than desktop
-$lg: 1000px;
+$lg                     : 1000px;
 // Larger than Desktop HD
-$xl: 1200px;
+$xl                     : 1200px;
