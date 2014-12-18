@@ -15,17 +15,17 @@ html {
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
-  font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font-weight: $body-font-weight;
+  font-family: $body-font;
+  color: $body-color;
 }
 
 
 a {
-  color: #1EAEDB;
+  color: $primary;
 
   &:hover {
-    color: #0FA0CE;
+    color: darken($primary, 10%);
   }
 }
 
@@ -61,8 +61,8 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
+  background: $lighter-grey;
+  border: 1px solid $light-grey;
   border-radius: 4px;
 }
 pre > code {
@@ -76,7 +76,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #E1E1E1;
+  border-top: 1px solid $light-grey;
 }
 
 
@@ -84,7 +84,7 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid $light-grey;
 }
 
 th:first-child,
@@ -108,6 +108,7 @@ ul,
 ol {
   margin-bottom: 2.5rem;
 }
+
 p {
   margin-top: 0;
 }

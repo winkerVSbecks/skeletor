@@ -23,10 +23,9 @@ select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
-  border: 1px solid #D1D1D1;
+  border: 1px solid $light-grey;
   border-radius: 4px;
   box-shadow: none;
-  box-sizing: border-box;
 }
 /* Removes awkard default styles on some inputs for iOS */
 input[type="email"],
@@ -40,10 +39,13 @@ textarea {
      -moz-appearance: none;
           appearance: none;
 }
+
 textarea {
   min-height: 65px;
   padding-top: 6px;
-  padding-bottom: 6px; }
+  padding-bottom: 6px;
+}
+
 input[type="email"]:focus,
 input[type="search"]:focus,
 input[type="text"]:focus,
@@ -55,22 +57,26 @@ select:focus {
   border: 1px solid $primary;
   outline: 0;
 }
+
 label,
 legend {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
 }
+
 fieldset {
   padding: 0;
   border-width: 0;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
 }
+
 label > .label-body {
   display: inline-block;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   font-weight: normal;
 }

@@ -3,8 +3,28 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Colours */
-$primary: #33C3F0;
+$primary: #3498db;
 
+$lighter-grey: #ecf0f1;
+$light-grey: #bdc3c7;
+$dark-grey: #95a5a6;
+$black: #222;
+
+/* Body */
+$body-font: 'Droid Serif', serif;
+$body-font-weight: 400;
+$body-color: $black;
+
+/* Headings */
+$header-font: 'Montserrat', sans-serif;
+$header-font-weight: 700;
+
+/* Buttons */
+$button-font: $header-font;
+$button-font-weight: 400;
+$button-color: $dark-grey;
+$button-bg-color: #95a5a6;
+$button-border-color: $dark-grey;
 
 
 /* Media Queries */

@@ -11,13 +11,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+  font-family: $button-font;
+  font-weight: $button-font-weight;
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555;
+  color: $button-color;
   text-align: center;
   font-size: 11px;
-  font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
   text-transform: uppercase;
@@ -25,7 +26,7 @@ input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 1px solid $button-border-color;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -40,8 +41,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
+  color: darken($button-color, 20%);
+  border-color: darken($button-color, 20%);
   outline: 0;
 }
 
