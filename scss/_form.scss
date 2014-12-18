@@ -2,14 +2,14 @@
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 form {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5*$base-spacing;
 }
 
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5*$base-spacing;
 }
 
 input[type="email"],
@@ -24,7 +24,7 @@ select {
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: 1px solid $light-grey;
-  border-radius: 4px;
+  border-radius: $base-radius;
   box-shadow: none;
 }
 /* Removes awkard default styles on some inputs for iOS */
@@ -35,9 +35,7 @@ input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  @include appearance(none);
 }
 
 textarea {
@@ -61,8 +59,8 @@ select:focus {
 label,
 legend {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: 0.5*$base-spacing;
+  font-weight: $label-font-weight;
 }
 
 fieldset {
@@ -77,6 +75,6 @@ input[type="radio"] {
 
 label > .label-body {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 0.5*$base-spacing;
   font-weight: normal;
 }

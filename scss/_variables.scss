@@ -4,6 +4,8 @@
 
 /* Colours */
 $primary                : #3498db;
+$success                : #2ecc71;
+$danger                 : #e74c3c;
 
 $lighter-grey           : #ecf0f1;
 $light-grey             : #bdc3c7;
@@ -14,10 +16,14 @@ $black                  : #222;
 $body-font              : 'Droid Serif', serif;
 $body-font-weight       : 400;
 $body-color             : $black;
+$body-bg                : #fff;
 
 /* Headings */
 $header-font            : 'Montserrat', sans-serif;
 $header-font-weight     : 700;
+
+/* Misc Font */
+$label-font-weight      : 700;
 
 /* Base Metrics */
 $base-spacing           : 1rem;
@@ -42,6 +48,20 @@ $btn-prim-border        : $primary;
 $btn-prim-color-h       : $btn-prim-color;
 $btn-prim-bg-h          : darken($btn-prim-bg, 5%);
 $btn-prim-border-h      : darken($btn-prim-border, 5%);
+// Success
+$btn-succ-color         : #fff;
+$btn-succ-bg            : $success;
+$btn-succ-border        : $success;
+$btn-succ-color-h       : $btn-succ-color;
+$btn-succ-bg-h          : darken($btn-succ-bg, 5%);
+$btn-succ-border-h      : darken($btn-succ-border, 5%);
+// Danger
+$btn-dang-color         : #fff;
+$btn-dang-bg            : $danger;
+$btn-dang-border        : $danger;
+$btn-dang-color-h       : $btn-dang-color;
+$btn-dang-bg-h          : darken($btn-dang-bg, 5%);
+$btn-dang-border-h      : darken($btn-dang-border, 5%);
 
 
 /* Media Queries */

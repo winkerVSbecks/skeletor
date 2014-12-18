@@ -14,15 +14,16 @@
   float: left;
 }
 
-/* For devices larger than 400px */
-@media (min-width: 400px) {
+/* For devices larger than mobile */
+@media (min-width: $xs) {
   .container {
     width: 85%;
-    padding: 0; }
+    padding: 0;
+  }
 }
 
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* For devices larger than phablet */
+@media (min-width: $sm) {
   .container {
     width: 80%;
   }
@@ -91,9 +92,6 @@
 
 /* Self Clearing Goodness */
 .container:after,
-.row:after,
-.u-cf {
-  content: "";
-  display: table;
-  clear: both;
+.row:after {
+  @extend .u-cf;
 }

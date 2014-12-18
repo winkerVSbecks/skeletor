@@ -18,6 +18,7 @@ body {
   font-weight: $body-font-weight;
   font-family: $body-font;
   color: $body-color;
+  background-color: $body-bg;
 }
 
 
@@ -47,12 +48,12 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  margin: 1.5*$base-spacing 0 1.5*$base-spacing 3*$base-spacing;
   font-size: 90%;
 }
 
 li {
-  margin-bottom: 1rem;
+  margin-bottom: $base-spacing;
 }
 
 
@@ -63,7 +64,7 @@ code {
   white-space: nowrap;
   background: $lighter-grey;
   border: 1px solid $light-grey;
-  border-radius: 4px;
+  border-radius: $base-radius;
 }
 pre > code {
   display: block;
@@ -73,8 +74,8 @@ pre > code {
 
 
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
+  margin-top: 3*$base-spacing;
+  margin-bottom: 3.5*$base-spacing;
   border-width: 0;
   border-top: 1px solid $light-grey;
 }
@@ -106,7 +107,7 @@ table,
 p,
 ul,
 ol {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5*$base-spacing;
 }
 
 p {

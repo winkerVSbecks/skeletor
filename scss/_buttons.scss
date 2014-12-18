@@ -67,3 +67,13 @@ button,
   @include btn-gen($btn-prim-color, $btn-prim-bg, $btn-prim-border,
                    $btn-prim-color-h, $btn-prim-bg-h, $btn-prim-border-h);
 }
+/* Success Button */
+.btn--success {
+  @include btn-gen($btn-succ-color, $btn-succ-bg, $btn-succ-border,
+                   $btn-succ-color-h, $btn-succ-bg-h, $btn-succ-border-h);
+}
+/* Danger Button */
+.btn--danger {
+  @include btn-gen($btn-dang-color, $btn-dang-bg, $btn-dang-border,
+                   $btn-dang-color-h, $btn-dang-bg-h, $btn-dang-border-h);
+}
