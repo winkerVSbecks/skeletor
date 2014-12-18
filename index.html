@@ -2,102 +2,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Basic Page Needs -->
   <meta charset="utf-8">
   <title>Skeletor: the sassy skeleton</title>
   <meta name="description" content="">
   <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- fonts -->
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- styles -->
   <link rel="stylesheet" href="css/skeletor.min.css">
   <link rel="stylesheet" href="http://getskeleton.com/css/custom.css">
-
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <link rel="stylesheet" href="http://getskeleton.com/css/github-prettify-theme.css">
-  <script src="js/site.js"></script>
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- favicon -->
   <link rel="icon" type="image/png" href="dist/images/favicon.png">
-
 </head>
+
 <body class="code-snippets-visible">
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Primary Page Layout -->
   <div class="container">
 
     <section class="header">
-      <h2 class="title">Skeletor: the sassy skeleton</h2>
+      <img class="u-thumbnail" src="http://media.giphy.com/media/rhi3nNWnIsAms/giphy.gif">
+      <h2 class="title">Skeletor: The Sassy Skeleton</h2>
     </section>
 
-    <!-- Grid -->
+    <!-- 12 Column Grid -->
     <div class="docs-section" id="grid">
-      <h6 class="docs-header">The grid</h6>
+      <h6 class="docs-header">The 12 column grid</h6>
       <p>The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser. </p>
       <div class="example-grid docs-example">
         <div class="row">
-          <div class="one column">One</div>
-          <div class="eleven columns">Eleven</div>
-        </div>
-        <div class="row">
           <div class="two columns">Two</div>
-          <div class="ten columns">Ten</div>
-        </div>
-        <div class="row">
-          <div class="three columns">Three</div>
-          <div class="nine columns">Nine</div>
-        </div>
-        <div class="row">
-          <div class="four columns">Four</div>
-          <div class="eight columns">Eight</div>
-        </div>
-        <div class="row">
-          <div class="five columns">Five</div>
           <div class="seven columns">Seven</div>
-        </div>
-        <div class="row">
-          <div class="six columns">Six</div>
-          <div class="six columns">Six</div>
-        </div>
-        <div class="row">
-          <div class="seven columns">Seven</div>
-          <div class="five columns">Five</div>
-        </div>
-        <div class="row">
-          <div class="eight columns">Eight</div>
-          <div class="four  columns">Four</div>
-        </div>
-        <div class="row">
-          <div class="nine columns">Nine</div>
           <div class="three columns">Three</div>
         </div>
         <div class="row">
-          <div class="ten columns">Ten</div>
-          <div class="two columns">Two</div>
+          <div class="one-third column">One-Third</div>
+          <div class="two-thirds column">Two-Thirds</div>
         </div>
         <div class="row">
-          <div class="eleven columns">Eleven</div>
-          <div class="one column">One</div>
+          <div class="offset-by-three nine columns">
+            Nine <em>offset-by-three</em>
+          </div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            Twelve
+          </div>
         </div>
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint"><!-- .container is main centered wrapper -->
 <div class="container">
@@ -129,7 +87,51 @@
 <!-- Note: columns can be nested, but it's not recommended since Skeletor's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
+
+
+    </div>
+
+    <!-- Grid Mixins -->
+    <div class="docs-section" id="grid">
+      <h6 class="docs-header">Grid Mixins</h6>
+      <p>While the <strong>12 Column Grid</strong> classes are available, it is recommended to use the mixins instead. Use of pre-calculated grid classes requires usage of numerous non-semantic class names throughout a document, such as <code>row</code>, <code>column</code>, etc. Using the mixin keeps the markup clean and allows us to use appropriate semantic tags such as <code>main</code>, <code>section</code> and <code>aside</code> instead.</p>
+
+<div class="main">
+  <div class="section"> Blog Posts </div>
+  <div class="aside"> Sidebar </div>
+</div>
+</code>
+
+<div class="row">
+<!-- Code Example -->
+<pre class="code-example six columns">
+<code class="code-example-body prettyprint">/* Two column (blog style) layout */
+main {
+  @include row;
+}
+/* 8 Column div for the blog posts */
+section {
+  @include col(8);
+}
+/* 4 Column div for the side-bar */
+aside {
+  @include col(4);
+}
+</code>
+</pre>
+<!-- END Code Example -->
+<!-- Code Example -->
+<pre class="code-example six columns">
+<code class="code-example-body prettyprint"><!-- Cleaner markup -->
+<main>
+  <section> ... </section>
+  <aside> ... </aside>
+</main>
+</code>
+</pre>
+<!-- END Code Example -->
+</div>
 
 
     </div>
@@ -156,7 +158,7 @@
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint"><!-- Standard Headings -->
 <h1>Heading</h1>
@@ -176,7 +178,7 @@
 <u>Underlined</u>
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
@@ -213,7 +215,7 @@
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint"><!-- Standard buttons -->
 <a class="button" href="#">Anchor button</a>
@@ -228,7 +230,7 @@
 <input class="btn--primary" type="button" value="button input">
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
@@ -264,7 +266,7 @@
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint"><!-- The above form looks like this -->
 <form>
@@ -296,7 +298,7 @@
 <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
@@ -334,7 +336,7 @@
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint"><ul>
   <li>Item 1</li>
@@ -351,7 +353,7 @@
 <!-- Easily substitute any <ul> or an <ol> to get number lists or sublists. Skeletor doesn't support lists nested deeper than 2 levels -->
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
@@ -367,7 +369,7 @@
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint"><pre><code>.some-class {
   background-color: red;
@@ -376,7 +378,7 @@
 <!-- Remember every whitespace and break will be preserved in a <pre>, including indentation in your code -->
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
@@ -413,7 +415,7 @@
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint"><table class="u-full-width">
   <thead>
@@ -441,7 +443,7 @@
 </table>
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
@@ -467,7 +469,7 @@
       </div>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- CODE EXAMPLE END Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint">/* Mobile first queries */
 
@@ -489,7 +491,7 @@
 
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
@@ -501,7 +503,7 @@
       <p>Skeletor has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to use a utility class than create a whole new class just to float an element.</p>
 
 
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<!-- Code Example -->
 <pre class="code-example">
 <code class="code-example-body prettyprint">/* Utility Classes */
 
@@ -533,14 +535,16 @@
 }
 </code>
 </pre>
-<!-- ————————————————————————————————————————————————————— -->
+<!-- END Code Example -->
 
 
     </div>
-
   </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="http://getskeleton.com/css/github-prettify-theme.css">
+  <script src="js/site.js"></script>
 </body>
 </html>

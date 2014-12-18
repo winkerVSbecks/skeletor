@@ -4,16 +4,20 @@ var connect = require('gulp-connect');
 var colors = require('colors');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
-var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/skeletor.scss')
     .pipe(sass({
-      errLogToConsole:true,
-      includePaths: require('node-bourbon').includePaths
+      sourcemap: false,
+      sourcemapPath: '../scss'
     }))
+    .on('error', function (err) {
+      console.log(err.message);
+    })
+    .pipe(gulp.dest('./css/'))
     .pipe(minifyCss({
       keepSpecialComments: 0
     }))

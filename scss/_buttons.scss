@@ -41,17 +41,17 @@ button {
 }
 
 /* Button Generator */
-@mixin btn-gen($color, $bg, $border, $color-h, $bg-h, $border-h) {
+@mixin btn-gen($btn-info) {
   @include btn-base;
-  color: $color;
-  background-color: $bg;
-  border: 1px solid $border;
+  color: map-get($btn-info, color);
+  background-color: map-get($btn-info, bg);
+  border: 1px solid map-get($btn-info, border);
 
   &:hover,
   &:focus {
-    color: $color-h;
-    background-color: $bg-h;
-    border-color: $border-h;
+    color: map-get(map-get($btn-info, hover), color);
+    background-color: map-get(map-get($btn-info, hover), bg);
+    border-color: map-get(map-get($btn-info, hover), border);
   }
 }
 
@@ -59,21 +59,17 @@ button {
 /* Basic button */
 button,
 .btn {
-  @include btn-gen($btn-color, $btn-bg, $btn-border,
-                   $btn-color-h, $btn-bg-h, $btn-border-h);
+  @include btn-gen($btn);
 }
 /* Primary Button */
 .btn--primary {
-  @include btn-gen($btn-prim-color, $btn-prim-bg, $btn-prim-border,
-                   $btn-prim-color-h, $btn-prim-bg-h, $btn-prim-border-h);
+  @include btn-gen($btn-primary);
 }
 /* Success Button */
 .btn--success {
-  @include btn-gen($btn-succ-color, $btn-succ-bg, $btn-succ-border,
-                   $btn-succ-color-h, $btn-succ-bg-h, $btn-succ-border-h);
+  @include btn-gen($btn-success);
 }
 /* Danger Button */
 .btn--danger {
-  @include btn-gen($btn-dang-color, $btn-dang-bg, $btn-dang-border,
-                   $btn-dang-color-h, $btn-dang-bg-h, $btn-dang-border-h);
+  @include btn-gen($btn-danger);
 }

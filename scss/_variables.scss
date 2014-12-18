@@ -2,6 +2,11 @@
 /* Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Base Metrics */
+$base-spacing           : 1rem;
+$base-radius            : 4px;
+
+
 /* Colours */
 $primary                : #3498db;
 $success                : #2ecc71;
@@ -12,22 +17,33 @@ $light-grey             : #bdc3c7;
 $dark-grey              : #95a5a6;
 $black                  : #222;
 
-/* Body */
+
+/* Fonts */
+// Body
 $body-font              : 'Droid Serif', serif;
 $body-font-weight       : 400;
 $body-color             : $black;
 $body-bg                : #fff;
-
-/* Headings */
+// Headings
 $header-font            : 'Montserrat', sans-serif;
 $header-font-weight     : 700;
-
-/* Misc Font */
+// Misc
 $label-font-weight      : 700;
 
-/* Base Metrics */
-$base-spacing           : 1rem;
-$base-radius            : 4px;
+
+/* Media Queries */
+$xs                     : 400px; // Larger than mobile
+$sm                     : 550px; // Larger than phablet
+$md                     : 750px; // Larger than tablet
+$lg                     : 1000px; // Larger than desktop
+$xl                     : 1200px; // Larger than Desktop HD
+
+
+/* 12 Column Flexible Grid */
+$fg-column              : 4.66666666667%; // Column Width
+$fg-gutter              : 4%; // Gutter Width
+$fg-max-columns         : 12;
+
 
 /* Buttons */
 $btn-font               : $header-font;
@@ -35,43 +51,46 @@ $btn-font-weight        : 400;
 $btn-font-size          : 11px;
 $btn-size               : 38px;
 // Basic
-$btn-color              : $dark-grey;
-$btn-bg                 : rgba(0, 0, 0, 0);
-$btn-border             : $dark-grey;
-$btn-color-h            : darken($btn-color, 20%);
-$btn-bg-h               : rgba(0, 0, 0, 0);
-$btn-border-h           : darken($btn-border, 20%);
+$btn: (
+  color                 : $dark-grey,
+  bg                    : rgba(0, 0, 0, 0),
+  border                : $dark-grey,
+  hover: (
+    color               : darken($dark-grey, 20%),
+    bg                  : rgba(0, 0, 0, 0),
+    border              : darken($dark-grey, 20%)
+  )
+);
 // Primary
-$btn-prim-color         : #fff;
-$btn-prim-bg            : $primary;
-$btn-prim-border        : $primary;
-$btn-prim-color-h       : $btn-prim-color;
-$btn-prim-bg-h          : darken($btn-prim-bg, 5%);
-$btn-prim-border-h      : darken($btn-prim-border, 5%);
+$btn-primary: (
+  color                 : #fff,
+  bg                    : $primary,
+  border                : $primary,
+  hover: (
+    color               : #fff,
+    bg                  : darken($primary, 5%),
+    border              : darken($primary, 5%)
+  )
+);
 // Success
-$btn-succ-color         : #fff;
-$btn-succ-bg            : $success;
-$btn-succ-border        : $success;
-$btn-succ-color-h       : $btn-succ-color;
-$btn-succ-bg-h          : darken($btn-succ-bg, 5%);
-$btn-succ-border-h      : darken($btn-succ-border, 5%);
+$btn-success: (
+  color                 : #fff,
+  bg                    : $success,
+  border                : $success,
+  hover: (
+    color               : #fff,
+    bg                  : darken($success, 5%),
+    border              : darken($success, 5%)
+  )
+);
 // Danger
-$btn-dang-color         : #fff;
-$btn-dang-bg            : $danger;
-$btn-dang-border        : $danger;
-$btn-dang-color-h       : $btn-dang-color;
-$btn-dang-bg-h          : darken($btn-dang-bg, 5%);
-$btn-dang-border-h      : darken($btn-dang-border, 5%);
-
-
-/* Media Queries */
-// Larger than mobile
-$xs                     : 400px;
-// Larger than phablet (also point when grid becomes active)
-$sm                     : 550px;
-// Larger than tablet
-$md                     : 750px;
-// Larger than desktop
-$lg                     : 1000px;
-// Larger than Desktop HD
-$xl                     : 1200px;
+$btn-danger: (
+  color                 : #fff,
+  bg                    : $danger,
+  border                : $danger,
+  hover: (
+    color               : #fff,
+    bg                  : darken($danger, 5%),
+    border              : darken($danger, 5%)
+  )
+);
