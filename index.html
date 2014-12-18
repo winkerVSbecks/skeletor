@@ -95,7 +95,7 @@
     <!-- Grid Mixins -->
     <div class="docs-section" id="grid">
       <h6 class="docs-header">Grid Mixins</h6>
-      <p>While the <strong>12 Column Grid</strong> classes are available, it is recommended to use the mixins instead. Use of pre-calculated grid classes requires usage of numerous non-semantic class names throughout a document, such as <code>row</code>, <code>column</code>, etc. Using the mixin keeps the markup clean and allows us to use appropriate semantic tags such as <code>main</code>, <code>section</code> and <code>aside</code> instead.</p>
+      <p>While the <strong>12 Column Grid</strong> classes are available, it is recommended to use the mixins instead. Use of pre&#8209;calculated grid classes requires usage of numerous non-semantic class names throughout a document, such as <code>row</code>, <code>column</code>, etc. Using the mixin keeps the markup clean and allows us to use appropriate semantic tags such as <code>main</code>, <code>section</code> and <code>aside</code> instead.</p>
 
 <div class="main">
   <div class="section"> Blog Posts </div>
@@ -474,19 +474,19 @@ aside {
 <code class="code-example-body prettyprint">/* Mobile first queries */
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: $xs) {}
 
 /* Larger than phablet */
-@media (min-width: 550px) {}
+@media (min-width: $sm) {}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: $md) {}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: $lg) {}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: $xl) {}
 
 
 </code>
@@ -508,31 +508,20 @@ aside {
 <code class="code-example-body prettyprint">/* Utility Classes */
 
 /* Make element full width */
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box;
-}
+.u-full-width
 
 /* Make sure elements don't run outside containers (great for images in columns) */
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box;
-}
+.u-max-full-width
 
 /* Float either direction */
-.u-pull-right {
-  float: right;
-}
-.u-pull-left {
-  float: left;
-}
+.u-pull-right
+.u-pull-left
 
 /* Clear a float */
-.u-cf {
-  content: "";
-  display: table;
-  clear: both;
-}
+.u-cf
+
+/* Vertically center anything */
+%u-vertical-align
 </code>
 </pre>
 <!-- END Code Example -->
