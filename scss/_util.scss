@@ -13,6 +13,15 @@
 .u-pull-left {
   float: left;
 }
+.u-text-center {
+  text-align: center;
+}
+.u-text-left {
+  text-align: left;
+}
+.u-text-right {
+  text-align: right;
+}
 /* Self Clearing Goodness */
 .u-cf {
   content: "";
@@ -32,3 +41,4 @@
   top: 50%;
   @include transform(translate(-50%));
 }
+

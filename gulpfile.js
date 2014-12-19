@@ -7,6 +7,7 @@ var concat = require('gulp-concat');
 var sass = require('gulp-ruby-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
+var fileinclude = require('gulp-file-include');
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/skeletor.scss')
@@ -28,7 +29,18 @@ gulp.task('sass', function(done) {
 });
 
 
-gulp.task('dev', ['sass'], function() {
+gulp.task('buildDocs', function() {
+  gulp.src(['./docs/index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./'))
+    .pipe(connect.reload());
+});
+
+
+gulp.task('dev', ['sass', 'buildDocs'], function() {
   // Start a server
   connect.server({
     root: '',
@@ -41,6 +53,8 @@ gulp.task('dev', ['sass'], function() {
   console.log('[CONNECT] Watching files for live-reload'.blue);
   watch(['./index.html', './js/**/*.js'])
     .pipe(connect.reload());
+
+  watch('./docs/*.html', ['buildDocs']);
 
   // Watch HTML files for changes
   console.log('[CONNECT] Watching SASS files'.blue);
