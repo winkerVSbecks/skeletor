@@ -8,6 +8,7 @@ var sass = require('gulp-ruby-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var fileinclude = require('gulp-file-include');
+var cssStats = require('gulp-css-statistics');
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/skeletor.scss')
@@ -27,6 +28,14 @@ gulp.task('sass', function(done) {
     .pipe(connect.reload())
     .on('end', done);
 });
+
+
+gulp.task('cssStats', function() {
+  gulp.src('./css/skeletor.css')
+    .pipe(cssStats())
+    .pipe(gulp.dest('./css/'));
+});
+
 
 
 gulp.task('buildDocs', function() {
