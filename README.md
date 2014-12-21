@@ -1,3 +1,3 @@
 # Skeletor
-![](img/skeletor.png)
+![](img/skeletor-small.png)
 The Sassy Skeleton
