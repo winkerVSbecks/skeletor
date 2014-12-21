@@ -63,7 +63,7 @@ gulp.task('dev', ['sass', 'buildDocs'], function() {
   watch(['./index.html', './js/**/*.js'])
     .pipe(connect.reload());
 
-  watch('./docs/*.html', ['buildDocs']);
+  gulp.watch('./docs/*.html', ['buildDocs']);
 
   // Watch HTML files for changes
   console.log('[CONNECT] Watching SASS files'.blue);

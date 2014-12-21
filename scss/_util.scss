@@ -28,17 +28,9 @@
   display: table;
   clear: both;
 }
-.u-thumbnail {
-  padding: 5px;
-  border: 1px solid $light-grey;
-  border-radius: $base-radius;
-  margin-bottom: $base-spacing;
-  max-width: 480px;
-  width: 100%;
-}
+/* Vertical centring */
 %u-vertical-align {
   position: relative;
   top: 50%;
   @include transform(translate(-50%));
 }
-
