@@ -9,7 +9,7 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var fileinclude = require('gulp-file-include');
 var cssStats = require('gulp-css-statistics');
-var postcss    = require('gulp-postcss');
+var postcss = require('gulp-postcss');
 var gulpIgnore = require('gulp-ignore');
 var scsslint = require('gulp-scss-lint');
 
@@ -21,7 +21,7 @@ gulp.task('css-stats', function() {
 });
 
 
-gulp.task('bem', ['sass'], function () {
+gulp.task('scss-lint', function () {
   return gulp.src('./scss/**/*.scss')
           .pipe(scsslint({
             'config': 'scss-lint.yml',
@@ -29,7 +29,7 @@ gulp.task('bem', ['sass'], function () {
 });
 
 
-gulp.task('sass', function(done) {
+gulp.task('sass', ['scss-lint'], function(done) {
   gulp.src('./scss/skeletor.scss')
     .pipe(sass({
       sourcemap: false,

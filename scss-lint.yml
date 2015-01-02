@@ -37,7 +37,7 @@ linters:
 
   FinalNewline:
     enabled: true
-    present: true
+    present: false
 
   HexLength:
     enabled: true
@@ -74,7 +74,7 @@ linters:
   NameFormat:
     enabled: true
     allow_leading_underscore: true
-    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+    convention: BEM # or 'BEM', or a regex pattern
 
   NestingDepth:
     enabled: true
@@ -103,7 +103,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: hyphenated_BEM # or 'BEM', or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
     enabled: true
@@ -145,7 +145,7 @@ linters:
     enabled: false
 
   UnnecessaryMantissa:
-    enabled: true
+    enabled: false
 
   UnnecessaryParentReference:
     enabled: true
@@ -157,7 +157,7 @@ linters:
     enabled: true
 
   VendorPrefixes:
-    enabled: true
+    enabled: false
     identifier_list: base
     include: []
     exclude: []

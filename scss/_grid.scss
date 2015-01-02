@@ -2,31 +2,31 @@
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 20px;
   position: relative;
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
+
 .column,
 .columns {
-  width: 100%;
   float: left;
+  width: 100%;
 }
 
 /* For devices larger than mobile */
 @media (min-width: $xs) {
   .container {
-    width: 85%;
     padding: 0;
+    width: 85%;
   }
 }
 
 /* For devices larger than phablet */
 @media (min-width: $sm) {
-  .container {
-    width: 80%;
-  }
+  .container { width: 80%; }
+
   .column,
   .columns {
     margin-left: flex-gutter();
@@ -72,7 +72,16 @@
   }
 }
 
+/* Row */
+@mixin row {
+  width: 100%;
+
+  &:after {
+    @extend %u-cf;
+  }
+}
+
 .container:after,
 .row:after {
-  @extend .u-cf;
+  @extend %u-cf;
 }

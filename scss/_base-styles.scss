@@ -13,12 +13,13 @@ html {
 }
 
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
-  font-weight: $body-font-weight;
-  font-family: $body-font;
-  color: $body-color;
   background-color: $body-bg;
+  color: $body-color;
+  font-family: $body-font;
+  // currently ems cause chrome bug misinterpreting rems on body element
+  font-size: 1.5em;
+  font-weight: $body-font-weight;
+  line-height: 1.6;
 }
 
 
@@ -33,13 +34,14 @@ a {
 
 ol,
 ul {
-  padding-left: 0;
   margin-top: 0;
+  padding-left: 0;
 }
 
 ul {
   list-style: circle inside;
 }
+
 ol {
   list-style: decimal inside;
 }
@@ -48,8 +50,8 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5*$base-spacing 0 1.5*$base-spacing 3*$base-spacing;
   font-size: 90%;
+  margin: 1.5*$base-spacing 0 1.5*$base-spacing 3*$base-spacing;
 }
 
 li {
@@ -58,14 +60,15 @@ li {
 
 
 code {
-  padding: 0.2rem 0.5rem;
-  margin: 0 0.2rem;
-  font-size: 90%;
-  white-space: nowrap;
   background: $lighter-grey;
   border: 1px solid $light-grey;
   border-radius: $base-radius;
+  font-size: 90%;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
 }
+
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
@@ -74,18 +77,18 @@ pre > code {
 
 
 hr {
-  margin-top: 3*$base-spacing;
-  margin-bottom: 3.5*$base-spacing;
-  border-width: 0;
   border-top: 1px solid $light-grey;
+  border-width: 0;
+  margin-bottom: 3.5*$base-spacing;
+  margin-top: 3*$base-spacing;
 }
 
 
 th,
 td {
+  border-bottom: 1px solid $light-grey;
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid $light-grey;
 }
 
 th:first-child,

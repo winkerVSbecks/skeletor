@@ -4,33 +4,41 @@
 .u-full-width {
   width: 100%;
 }
+
 .u-max-full-width {
   max-width: 100%;
 }
+
 .u-pull-right {
   float: right;
 }
+
 .u-pull-left {
   float: left;
 }
+
 .u-text-center {
   text-align: center;
 }
+
 .u-text-left {
   text-align: left;
 }
+
 .u-text-right {
   text-align: right;
 }
+
 /* Self Clearing Goodness */
-.u-cf {
-  content: "";
-  display: table;
+%u-cf {
   clear: both;
+  content: '';
+  display: table;
 }
+
 /* Vertical centring */
 %u-vertical-align {
+  @include transform(translate(-50%));
   position: relative;
   top: 50%;
-  @include transform(translate(-50%));
 }

@@ -1,19 +1,21 @@
 
 /* Flexbox Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Row */
 .flex-row {
   @include display(flex);
   padding: $base-spacing;
   width: 100%;
+
+  + .flex-row {
+    margin-top: $base-spacing * -1;
+    padding-top: 0;
+  }
 }
 
 .flex-row--wrap {
   @include flex-wrap(wrap);
-}
-
-.flex-row + .flex-row {
-  margin-top: $base-spacing * -1;
-  padding-top: 0;
 }
 
 /* Vertically Align Columns */
@@ -21,21 +23,25 @@
 .flex__row--top {
   @include align-items(flex-start);
 }
+
 .flex__row--center {
   @include align-items(center);
 }
+
 .flex__row--bottom {
   @include align-items(flex-end);
 }
+
 .flex__row--stretch {
   @include align-items(stretch);
 }
+
 .flex__row--baseline {
   @include align-items(baseline);
 }
 
-
-.flex-row__col {
+/* Column */
+%flex-row__col {
   @include flex(1);
   display: block;
   padding: $base-spacing;
@@ -44,19 +50,22 @@
 
 /* .flex-row__col-* vertically aligns an individual .flex-row__col */
 .flex-row__col--top {
-  @extend .flex-row__col;
+  @extend %flex-row__col;
   @include align-self(flex-start);
 }
+
 .flex-row__col--center {
-  @extend .flex-row__col;
+  @extend %flex-row__col;
   @include align-self(center);
 }
+
 .flex-row__col--bottom {
-  @extend .flex-row__col;
+  @extend %flex-row__col;
   @include align-self(flex-end);
 }
 
+/* Clear Fix */
 .flex-row:before,
 .flex-row:after {
-  @extend .u-cf;
+  @extend %u-cf;
 }
