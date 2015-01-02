@@ -1,0 +1,37 @@
+
+/* Mixins and Functions
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* 12 Column Grid */
+@function column-name($i) {
+  $col-names: (one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
+  @return nth($col-names, $i);
+}
+@function offset-name($i) {
+  $col-names: (offset-by-one, offset-by-two, offset-by-three, offset-by-four, offset-by-five, offset-by-six, offset-by-seven, offset-by-eight, offset-by-nine, offset-by-ten, offset-by-eleven, offset-by-twelve);
+  @return nth($col-names, $i);
+}
+
+/* Column builder mixin */
+@mixin col($i) {
+  width: 100%;
+  float: left;
+  margin-bottom: 0.75*$base-spacing;
+
+  @media (min-width: $sm) {
+    width: flex-grid($i);
+
+    &:not(:first-of-type) {
+      margin-left: flex-gutter();
+    }
+  }
+}
+
+@mixin row {
+  width: 100%;
+
+  &:after {
+    @extend .u-cf;
+  }
+}
+
