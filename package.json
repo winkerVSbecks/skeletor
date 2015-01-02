@@ -17,8 +17,8 @@
     "gulp-rename": "1.2.0",
     "node-bourbon": "1.2.3",
     "gulp-file-include": "^0.7.1",
-    "gulp-css-statistics": "0.0.2",
     "gulp-ignore": "^1.2.1",
-    "gulp-scss-lint": "^0.1.4"
+    "gulp-scss-lint": "^0.1.4",
+    "gulp-cssstats": "^1.0.0"
   }
 }

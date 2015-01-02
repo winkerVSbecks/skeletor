@@ -29,14 +29,12 @@
   text-align: right;
 }
 
-/* Self Clearing Goodness */
 %u-cf {
   clear: both;
   content: '';
   display: table;
 }
 
-/* Vertical centring */
 %u-vertical-align {
   @include transform(translate(-50%));
   position: relative;
