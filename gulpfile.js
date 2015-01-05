@@ -57,10 +57,13 @@ gulp.task('sass', ['scss-lint'], function(done) {
 
 
 gulp.task('build-docs', function() {
-  return gulp.src(['./docs/index.html'])
+  return gulp.src(['./docs/_index.html'])
           .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
+          }))
+          .pipe(rename({
+            basename: 'index'
           }))
           .pipe(gulp.dest('./'))
           .pipe(connect.reload());
@@ -81,7 +84,7 @@ gulp.task('dev', ['sass', 'build-docs'], function() {
   watch(['./index.html', './js/**/*.js', './css/stats/*'])
     .pipe(connect.reload());
 
-  gulp.watch('./docs/*.html', ['build-docs']);
+  gulp.watch('./docs/**/*.html', ['build-docs']);
 
   // Watch HTML files for changes
   console.log('[CONNECT] Watching SASS files'.blue);
