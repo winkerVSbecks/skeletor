@@ -1,0 +1,205 @@
+<!doctype html>
+<html ng-app="cssStats">
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Stats</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/base.min.css">
+  <link rel="stylesheet" href="css/chartist.css">
+</head>
+<body class="flex flex-column" style="min-height:100vh" ng-controller="statsCtrl as main">
+
+  <main class="flex-grow">
+    <div class="container px2">
+
+      <header class="sm-flex flex-center py2 mb3 border-bottom">
+        <div class="flex-grow break-word" style="max-width:80%">
+          <h1 class="m0" style="max-width:80%">CSS Stats</h1>
+        </div>
+        <div class="sm-right-align flex-grow">
+          <h1 class="h2 m0">{{ main.stats.size | filesize}}</h1>
+        </div>
+      </header>
+
+      <section id="top-stats" class="flex flex-wrap mxn2 mb4">
+        <div class="col-6 md-col-3 p2">
+          <h1 class="h00 lh1 m0">{{ main.stats.rules.length }}</h1>
+          <p class="h3 bold lh1 m0">Rules</p>
+        </div>
+        <div class="col-6 md-col-3 p2">
+          <h1 class="h00 lh1 m0">{{ main.stats.aggregates.selectors }}</h1>
+          <p class="h3 bold lh1 m0">Selectors</p>
+        </div>
+        <div class="col-6 md-col-3 p2">
+          <h1 class="h00 lh1 m0">{{ main.stats.aggregates.declarations }}</h1>
+          <p class="h3 bold lh1 m0">Declarations</p>
+        </div>
+        <div class="col-6 md-col-3 p2">
+          <h1 class="h00 lh1 m0">{{ main.stats.aggregates.properties.length }}</h1>
+          <p class="h3 bold lh1 m0">Properties</p>
+        </div>
+      </section>
+
+      <section id="declarations" class="mb4">
+        <h1 class="h2 m0">Total Declarations</h1>
+        <div class="flex flex-wrap mxn2">
+          <div class="col-6 sm-col-4 lg-col-2 p2">
+            <p class="bold lh1 m0">Font Size</p>
+            <h1 class="h0 lh1 m0">{{ main.stats.aggregates.fontSize.total }}</h1>
+          </div>
+          <div class="col-6 sm-col-4 lg-col-2 p2">
+            <p class="bold lh1 m0">Float</p>
+            <h1 class="h0 lh1 m0">{{ main.stats.aggregates.float.total }}</h1>
+          </div>
+          <div class="col-6 sm-col-4 lg-col-2 p2">
+            <p class="bold lh1 m0">Width</p>
+            <h1 class="h0 lh1 m0">{{ main.stats.aggregates.width.total }}</h1>
+          </div>
+          <div class="col-6 sm-col-4 lg-col-2 p2">
+            <p class="bold lh1 m0">Height</p>
+            <h1 class="h0 lh1 m0">{{ main.stats.aggregates.height.total }}</h1>
+          </div>
+          <div class="col-6 sm-col-4 lg-col-2 p2">
+            <p class="bold lh1 m0">Color</p>
+            <h1 class="h0 lh1 m0">{{ main.stats.aggregates.color.total }}</h1>
+          </div>
+          <div class="col-6 sm-col-4 lg-col-2 p2">
+            <p class="bold lh1 m0">Background Color</p>
+            <h1 class="h0 lh1 m0">{{ main.stats.aggregates.backgroundColor.total }}</h1>
+          </div>
+        </div>
+      </section>
+
+      <section id="unique-colors" class="mb4">
+        <h2>
+          {{ main.uniques.color.length }}
+          <ng-pluralize count="main.uniques.color.length"
+                 when="{'one': 'Unique Color',
+                        'other': 'Unique Colors'}">
+          </ng-pluralize>
+        </h2>
+        <div class="flex flex-wrap mxn2">
+          <div ng-repeat="color in main.uniques.color" class="col-4 sm-col-3 lg-col-2 p2">
+            <div class="h0 lh1 bold" style="color:{{ color.value }}">Aa</div>
+            <div class="h6 break-word">{{ color.value }}</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="unique-background-colors" class="mb4">
+        <h2>
+          {{ main.uniques.backgroundColor.length }}
+          <ng-pluralize count="main.uniques.backgroundColor.length"
+                 when="{'one': 'Unique Background Color',
+                        'other': 'Unique Background Colors'}">
+          </ng-pluralize>
+        </h2>
+        <div class="flex flex-wrap mxn2">
+          <div ng-repeat="color in main.uniques.backgroundColor" class="col-4 sm-col-3 lg-col-2 p2">
+            <div class="mb1">
+              <svg viewBox="0 0 64 64" width="64" height="64" style="display:block;width:100%;height:auto">
+                <rect width="64" height="64" fill="{{ color.value }}"/>
+              </svg>
+            </div>
+            <div class="h6 break-word">{{ color.value }}</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="unique-font-sizes" class="mb4">
+        <h2>
+          {{ main.uniques.fontSize.length }}
+          <ng-pluralize count="main.uniques.fontSize.length"
+                 when="{'one': 'Unique Font Size',
+                        'other': 'Unique Font Sizes'}">
+          </ng-pluralize>
+        </h2>
+        <div class="" ng-repeat="size in main.uniques.fontSizeSorted">
+          <div class="bold truncate mb1" style="font-size:{{ size.value }}">
+            Font Size {{ size.value }}
+          </div>
+        </div>
+      </section>
+
+      <section id="unique-font-families" class="mb4">
+        <h2>
+          {{ main.uniques.fontFamily.length }}
+          <ng-pluralize count="main.uniques.fontFamily.length"
+                 when="{'one': 'Unique Font Family',
+                        'other': 'Unique Font Familys'}">
+          </ng-pluralize>
+        </h2>
+        <div ng-repeat="family in main.uniques.fontFamily" class="h3 bold break-word mb1" style="font-family:{{ family.value }}">
+          {{ family.value }}
+        </div>
+      </section>
+
+      <section id="unique-totals" class="mb4">
+        <h1 class="h2 mt0">
+          Total
+          <span style="width: 15px; height: 15px; margin-right: 10px; background-color: #334455; display: inline-block;"></span>
+          vs. Unique
+          <span style="width: 15px; height: 15px; margin-right: 10px; background-color: #65727E; display: inline-block;"></span>
+          Declarations
+        </h1>
+        <div class="ct-chart ct-double-octave totalVsUnique">
+        </div>
+      </section>
+
+      <section id="specificity-graph" class="mb4">
+        <h1 class="h2 mt0">Specificity Graph</h1>
+        <div class="ct-chart ct-double-octave specificityGraph">
+        </div>
+        <p>Base 10 specificity score for each selector by source order.
+          Generally, lower scores and flatter curves are better for maintainability.
+          <a href="http://csswizardry.com/2014/10/the-specificity-graph/">Learn More</a>
+        </p>
+      </section>
+
+      <section id="rulesize-graph" class="mb4">
+        <h1 class="h2 mt0">Ruleset Size</h1>
+        <div class="ct-chart ct-double-octave rulesizeGraph">
+        </div>
+        <p>Number of declarations per ruleset</p>
+      </section>
+
+      <section id="media-queries" class="mb4">
+        <h1 class="h2 m0">
+          {{ main.stats.aggregates.mediaQueries.length }}
+          <ng-pluralize count="main.stats.aggregates.mediaQueries.length"
+                 when="{'one': 'Media Query',
+                        'other': 'Media Queries'}">
+          </ng-pluralize>
+        </h1>
+        <div class="flex flex-wrap mxn2">
+          <div ng-repeat="query in main.stats.aggregates.mediaQueries" class="h5 bold break-word col-6 sm-col-4 px2 mb2">
+            {{ query }}
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="px2">
+    <div class="flex flex-center container py3 border-top">
+      <p class="h5 m0">
+        Based on CSS Stats by
+        <a href="http://mrmrs.cc" class="bold dark-gray">Mrmrs</a>
+        &amp;
+        <a href="http://jxnblk.com" class="bold dark-gray">Jxnblk</a>
+      </p>
+      <div class="flex-grow"></div>
+      <a href="http://rangle.io" class="h5 button text-link print-hide">rangle.io</a>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/stats.js"></script>
+</body>
+</html>

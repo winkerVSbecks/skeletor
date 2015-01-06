@@ -43,15 +43,15 @@ button {
 /* Button Generator */
 @mixin btn-gen($btn-info) {
   @include btn-base;
-  color: map-get($btn-info, color);
   background-color: map-get($btn-info, bg);
+  color: map-get($btn-info, color);
   border: 1px solid map-get($btn-info, border);
 
   &:hover,
   &:focus {
-    color: map-get(map-get($btn-info, hover), color);
     background-color: map-get(map-get($btn-info, hover), bg);
     border-color: map-get(map-get($btn-info, hover), border);
+    color: map-get(map-get($btn-info, hover), color);
   }
 }
 

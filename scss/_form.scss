@@ -20,12 +20,13 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 38px;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: 1px solid $light-grey;
   border-radius: $base-radius;
   box-shadow: none;
+  height: 38px;
+  // The 6px vertically centers text on FF, ignored by Webkit
+  padding: 6px 10px;
 }
 /* Removes awkard default styles on some inputs for iOS */
 input[type="email"],
@@ -40,8 +41,8 @@ textarea {
 
 textarea {
   min-height: 65px;
-  padding-top: 6px;
   padding-bottom: 6px;
+  padding-top: 6px;
 }
 
 input[type="email"]:focus,
@@ -59,13 +60,13 @@ select:focus {
 label,
 legend {
   display: block;
-  margin-bottom: 0.5*$base-spacing;
   font-weight: $label-font-weight;
+  margin-bottom: 0.5*$base-spacing;
 }
 
 fieldset {
-  padding: 0;
   border-width: 0;
+  padding: 0;
 }
 
 input[type="checkbox"],
@@ -75,6 +76,6 @@ input[type="radio"] {
 
 label > .label--body {
   display: inline-block;
-  margin-left: 0.5*$base-spacing;
   font-weight: normal;
+  margin-left: 0.5*$base-spacing;
 }
