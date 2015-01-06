@@ -6,8 +6,10 @@
     "rangle.io (varun@rangle.io)"
   ],
   "license": "MIT",
+  "main": [
+    "scss/**/*.scss"
+  ],
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "tmp",
