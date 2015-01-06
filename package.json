@@ -1,7 +1,19 @@
 {
   "name": "skeletor",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.2.0",
+  "description": "the sassy skeleton",
+  "contributors": [
+    {
+      "name": "Varun Vachhar",
+      "email": "varun@rangle.io"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rangle/skeletor"
+  },
+  "author": "rangle.io",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

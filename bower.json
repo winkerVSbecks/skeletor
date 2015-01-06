@@ -1,9 +1,18 @@
 {
   "name": "skeletor",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.2.0",
+  "description": "the sassy skeleton",
+  "authors": [
+    "rangle.io (varun@rangle.io)"
+  ],
   "license": "MIT",
-  "ignore": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tmp",
+    "examples"
+  ],
   "dependencies": {
   }
 }
