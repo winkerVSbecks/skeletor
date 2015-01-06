@@ -3,8 +3,12 @@
 # Skeletor
 The Sassy Skeleton
 
+## Usage
+```
+bower install git@github.com:rangle/skeletor.git
+```
 
-## Development
+## Development
 
 1. Install dependencies:
     - `gem install sass`
