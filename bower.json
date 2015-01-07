@@ -3,11 +3,23 @@
   "version": "0.2.0",
   "description": "the sassy skeleton",
   "authors": [
-    "rangle.io (varun@rangle.io)"
+    "rangle.io <varun@rangle.io>"
   ],
   "license": "MIT",
+  "main": [
+    "_base-styles.scss",
+    "_buttons.scss",
+    "_flex-grid.scss",
+    "_form.scss",
+    "_grid.scss",
+    "_mixins.scss",
+    "_normalize.scss",
+    "_typography.scss",
+    "_util.scss",
+    "_variables.scss",
+    "skeletor.scss"
+  ],
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "tmp",
