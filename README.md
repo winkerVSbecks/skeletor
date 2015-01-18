@@ -13,7 +13,7 @@ bower install git@github.com:rangle/skeletor.git
 1. Install dependencies:
     - `gem install sass`
     - `gem install scss-lint`
-    - `npm install && bower install`
+    - `npm install`
 
 2. Gulp tasks available:
 
