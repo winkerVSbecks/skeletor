@@ -37,7 +37,7 @@ linters:
 
   FinalNewline:
     enabled: true
-    present: false
+    present: true
 
   HexLength:
     enabled: true
