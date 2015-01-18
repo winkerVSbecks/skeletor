@@ -12,6 +12,7 @@ fieldset {
   margin-bottom: 1.5*$base-spacing;
 }
 
+input[type="date"],
 input[type="email"],
 input[type="number"]
 input[type="search"],
@@ -30,6 +31,7 @@ select {
   padding: 6px 10px;
 }
 /* Removes awkard default styles on some inputs for iOS */
+input[type="date"],
 input[type="email"],
 input[type="number"]
 input[type="search"],
@@ -47,6 +49,7 @@ textarea {
   padding-top: 6px;
 }
 
+input[type="date"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
