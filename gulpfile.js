@@ -5,11 +5,11 @@ var colors = require('colors');
 var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var sass = require('gulp-ruby-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var fileinclude = require('gulp-file-include');
 var cssStats = require('gulp-cssstats');
-var postcss = require('gulp-postcss');
 var gulpIgnore = require('gulp-ignore');
 var scsslint = require('gulp-scss-lint');
 
@@ -29,16 +29,15 @@ gulp.task('scss-lint', function () {
 });
 
 
-gulp.task('sass', ['scss-lint'], function(done) {
-  gulp.src('./scss/skeletor.scss')
-    .pipe(sass({
-      sourcemap: false,
-      sourcemapPath: '../scss'
-    }))
-    .on('error', function (err) {
-      console.log(err.message);
+gulp.task('sass', ['scss-lint'], function() {
+  return sass('./scss/skeletor.scss', {
+      sourcemap: true,
     })
-    .pipe(gulp.dest('./css/'))
+    .pipe(sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: '/scss'
+    }))
+    .pipe(gulp.dest('./css'))
     .pipe(gulpIgnore.exclude(function(file) {
       if (file.path.indexOf('.map') !== -1) {
         return true;
@@ -50,9 +49,11 @@ gulp.task('sass', ['scss-lint'], function(done) {
     .pipe(rename({
       extname: '.min.css'
     }))
-    .pipe(gulp.dest('./css/'))
-    .pipe(connect.reload())
-    .on('end', done);
+    .pipe(gulp.dest('./css'))
+    .on('error', function (err) {
+      console.error(err.message);
+    })
+    .pipe(connect.reload());
 });
 
 
