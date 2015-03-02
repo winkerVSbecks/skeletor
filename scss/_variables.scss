@@ -3,53 +3,53 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Base Metrics */
-$base-spacing           : 1rem;
-$base-radius            : 4px;
+$base-spacing           : 1rem !default;
+$base-radius            : 4px !default;
 
 
 /* Colours */
-$primary                : #3498db;
-$success                : #2ecc71;
-$danger                 : #e74c3c;
+$primary                : #3498db !default;
+$success                : #2ecc71 !default;
+$danger                 : #e74c3c !default;
 
-$lighter-grey           : #ecf0f1;
-$light-grey             : #bdc3c7;
-$dark-grey              : #95a5a6;
-$black                  : #222;
+$lighter-grey           : #ecf0f1 !default;
+$light-grey             : #bdc3c7 !default;
+$dark-grey              : #95a5a6 !default;
+$black                  : #222 !default;
 
 
 /* Fonts */
 // Body
-$body-font              : 'Droid Serif', serif;
-$body-font-weight       : 400;
-$body-color             : $black;
-$body-bg                : #fff;
+$body-font              : 'Droid Serif', serif !default;
+$body-font-weight       : 400 !default;
+$body-color             : $black !default;
+$body-bg                : #fff !default;
 // Headings
-$header-font            : 'Montserrat', sans-serif;
-$header-font-weight     : 700;
+$header-font            : 'Montserrat', sans-serif !default;
+$header-font-weight     : 700 !default;
 // Misc
-$label-font-weight      : 700;
+$label-font-weight      : 700 !default;
 
 
 /* Media Queries */
-$xs                     : 400px; // Larger than mobile
-$sm                     : 550px; // Larger than phablet
-$md                     : 750px; // Larger than tablet
-$lg                     : 1000px; // Larger than desktop
-$xl                     : 1200px; // Larger than Desktop HD
+$xs                     : 400px !default; // Larger than mobile
+$sm                     : 550px !default; // Larger than phablet
+$md                     : 750px !default; // Larger than tablet
+$lg                     : 1000px !default; // Larger than desktop
+$xl                     : 1200px !default; // Larger than Desktop HD
 
 
 /* 12 Column Flexible Grid */
-$fg-column              : 4.66666666667%; // Column Width
-$fg-gutter              : 4%; // Gutter Width
-$fg-max-columns         : 12;
+$fg-column              : 4.66666666667% !default; // Column Width
+$fg-gutter              : 4% !default; // Gutter Width
+$fg-max-columns         : 12 !default;
 
 
 /* Buttons */
-$btn-font               : $header-font;
-$btn-font-weight        : 400;
-$btn-font-size          : 11px;
-$btn-size               : 38px;
+$btn-font               : $header-font !default;
+$btn-font-weight        : 400 !default;
+$btn-font-size          : 11px !default;
+$btn-size               : 38px !default;
 // Basic
 $btn: (
   color                 : $dark-grey,
