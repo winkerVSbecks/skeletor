@@ -1,0 +1,18 @@
+
+/* Layout Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Base Metrics */
+$base-spacing           : 1rem !default;
+$base-radius            : 4px !default;
+
+/* Media Queries */
+$xs                     : 400px !default; // Larger than mobile
+$sm                     : 550px !default; // Larger than phablet
+$md                     : 750px !default; // Larger than tablet
+$lg                     : 1000px !default; // Larger than desktop
+$xl                     : 1200px !default; // Larger than Desktop HD
+
+/* 12 Column Flexible Grid */
+$fg-column              : 4.66666666667% !default; // Column Width
+$fg-gutter              : 4% !default; // Gutter Width
+$fg-max-columns         : 12 !default;

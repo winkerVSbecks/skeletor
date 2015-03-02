@@ -12,18 +12,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "main": [
-    "scss/_base-styles.scss",
-    "scss/_buttons.scss",
-    "scss/_flex-grid.scss",
-    "scss/_form.scss",
-    "scss/_grid.scss",
-    "scss/_mixins.scss",
-    "scss/_normalize.scss",
-    "scss/_typography.scss",
-    "scss/_util.scss",
-    "scss/_variables.scss",
-    "scss/skeletor.scss"
   ]
 }

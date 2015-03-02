@@ -1,0 +1,17 @@
+
+/* Colours Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$primary                : #3498db !default;
+$success                : #2ecc71 !default;
+$danger                 : #e74c3c !default;
+
+$lighter-grey           : #ecf0f1 !default;
+$light-grey             : #bdc3c7 !default;
+$dark-grey              : #95a5a6 !default;
+$black                  : #222 !default;
+
+$body-colour            : $black !default;
+$body-bg                : #fff !default;
+
+$anchor-colour          : $primary !default;
+$anchor-colour-hover    : darken($primary, 10%) !default;

@@ -13,6 +13,8 @@ node_modules
 bower_components
 build
 /tmp
-css/skeletor.*
 skeletor.sketch
 index.html
+css
+!css/stats
+!css/docs.css
