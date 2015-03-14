@@ -1,0 +1,59 @@
+
+/* Example layouts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Two column (blog style) layout */
+.main {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+/* 8 Column div for the blog posts */
+.section {
+  background-color: #eee;
+  border-radius: 4px;
+  float: left;
+  line-height: 60px;
+  margin-bottom: 0.75rem;
+  width: 100%;
+
+  @media (min-width: 550px) {
+    width: 65.33333%;
+  }
+}
+
+
+/* 4 Column div for the side-bar */
+.aside {
+  background-color: #eee;
+  border-radius: 4px;
+  float: left;
+  line-height: 60px;
+  margin-bottom: 0.75rem;
+  width: 100%;
+
+  @media (min-width: 550px) {
+    width: 30.66667%;
+  }
+}
+
+
+
+@media (min-width: 550px) {
+  .aside:not(:first-of-type) {
+    margin-left: 4.0%;
+  }
+
+  .section:not(:first-of-type) {
+    margin-left: 4.0%;
+  }
+}

@@ -29,6 +29,23 @@ gulp.task('scss-lint', function () {
 });
 
 
+gulp.task('sass-docs', function() {
+  return sass('./scss/_docs/docs.scss', {
+      sourcemap: false,
+    })
+    .pipe(gulp.dest('./css'))
+    .pipe(minifyCss())
+    .pipe(rename({
+      extname: '.min.css'
+    }))
+    .pipe(gulp.dest('./css'))
+    .on('error', function (err) {
+      console.error(err.message);
+    })
+    .pipe(connect.reload());
+});
+
+
 gulp.task('sass', ['scss-lint'], function() {
   return sass('./scss/skeletor.scss', {
       sourcemap: true,
@@ -71,7 +88,7 @@ gulp.task('build-docs', function() {
 });
 
 
-gulp.task('dev', ['sass', 'build-docs'], function() {
+gulp.task('dev', ['sass', 'build-docs', 'sass-docs'], function() {
   // Start a server
   connect.server({
     root: '',
@@ -80,16 +97,17 @@ gulp.task('dev', ['sass', 'build-docs'], function() {
   });
   console.log('[CONNECT] Listening on port 3000'.yellow.inverse);
 
-  // Watch HTML files for changes
+  // Watch CSS stats files for changes
   console.log('[CONNECT] Watching files for live-reload'.blue);
   watch(['./index.html', './js/**/*.js', './css/stats/*'])
     .pipe(connect.reload());
 
+  // Watch HTML files for changes
   gulp.watch('./docs/**/*.html', ['build-docs']);
 
-  // Watch HTML files for changes
+  // Watch Sass files for changes
   console.log('[CONNECT] Watching SASS files'.blue);
-  gulp.watch('./scss/**/*.scss', ['sass']);
+  gulp.watch('./scss/**/*.scss', ['sass', 'sass-docs']);
 });
 
 

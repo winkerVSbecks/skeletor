@@ -41,6 +41,7 @@
 }
 
 /* Column */
+.flex-row__col,
 %flex-row__col {
   @include flex(1);
   display: block;

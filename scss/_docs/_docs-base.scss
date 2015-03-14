@@ -1,0 +1,22 @@
+
+/* Base styles for the documentation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  max-width: 800px;
+}
+
+.header {
+  margin-top: 6rem;
+  text-align: center;
+
+  @media (min-width: 550px) {
+    margin-top: 18rem;
+  }
+
+  &__logo {
+    margin-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
