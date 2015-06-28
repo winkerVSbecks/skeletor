@@ -1,6 +1,6 @@
 
-/* Documentation example related styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Documentation example related styles
+// ------------------------------------------------------------
 .docs-example {
 
   &.row,
@@ -21,7 +21,7 @@
 }
 
 
-/* Visualize the grid */
+// Visualize the grid
 .docs-example--visualize-grid {
   .column,
   .columns {
@@ -54,7 +54,7 @@
   }
 }
 
-/* Code Example */
+// Code Example
 .code-example {
   margin-bottom: 0;
   margin-top: 1.5rem;

@@ -1,8 +1,8 @@
 
-/* Mixins and Functions
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Mixins and Functions
+// ------------------------------------------------------------
 
-/* 12 Column Grid */
+// 12 Column Grid
 @function column-name($i) {
   $col-names: (one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve);
   @return nth($col-names, $i);
@@ -14,7 +14,7 @@
 }
 
 
-/* Column builder mixin */
+// Column builder mixin
 @mixin col($i) {
   width: 100%;
   float: left;

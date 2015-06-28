@@ -1,6 +1,6 @@
 
-/* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Forms
+// ------------------------------------------------------------
 form {
   margin-bottom: 2.5*$base-spacing;
 }
@@ -30,7 +30,7 @@ select {
   // The 6px vertically centers text on FF, ignored by Webkit
   padding: 6px 10px;
 }
-/* Removes awkard default styles on some inputs for iOS */
+// Removes awkard default styles on some inputs for iOS
 input[type="date"],
 input[type="email"],
 input[type="number"],

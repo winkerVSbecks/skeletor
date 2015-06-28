@@ -1,8 +1,8 @@
 
-/* Flexbox Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Flexbox Grid
+// ------------------------------------------------------------
 
-/* Row */
+// Row
 .flex-row {
   @include display(flex);
   padding: $base-spacing;
@@ -18,8 +18,8 @@
   @include flex-wrap(wrap);
 }
 
-/* Vertically Align Columns */
-/* .flex__row-* vertically aligns every .flex-col in the .flex__row */
+// Vertically Align Columns
+// .flex__row-* vertically aligns every .flex-col in the .flex__row
 .flex__row--top {
   @include align-items(flex-start);
 }
@@ -40,7 +40,7 @@
   @include align-items(baseline);
 }
 
-/* Column */
+// Column
 .flex-row__col,
 %flex-row__col {
   @include flex(1);
@@ -49,7 +49,7 @@
   width: 100%;
 }
 
-/* .flex-row__col-* vertically aligns an individual .flex-row__col */
+// .flex-row__col-* vertically aligns an individual .flex-row__col
 .flex-row__col--top {
   @extend %flex-row__col;
   @include align-self(flex-start);
@@ -65,7 +65,7 @@
   @include align-self(flex-end);
 }
 
-/* Clear Fix */
+// Clear Fix
 .flex-row:before,
 .flex-row:after {
   @extend %u-cf;

@@ -1,6 +1,6 @@
 
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Grid
+// ------------------------------------------------------------
 .container {
   margin: 0 auto;
   max-width: 960px;
@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-/* For devices larger than mobile */
+// For devices larger than mobile
 @media (min-width: $xs) {
   .container {
     padding: 0;
@@ -23,7 +23,7 @@
   }
 }
 
-/* For devices larger than phablet */
+// For devices larger than phablet
 @media (min-width: $sm) {
   .container { width: 80%; }
 
@@ -36,15 +36,15 @@
     }
   }
 
-  /* Grid Classes */
-  /* Singular */
+  // Grid Classes
+  // Singular
   .column {
     &.one {  width: flex-grid(1); }
     &.one-third { width: flex-grid(4); }
     &.two-thirds { width: flex-grid(8); }
     &.one-half { width: flex-grid(6); }
   }
-  /* Plural */
+  // Plural
   .columns {
     @for $i from 1 through 12 {
       &.#{column-name($i)} {
@@ -57,7 +57,7 @@
     }
   }
 
-  /* Offsets */
+  // Offsets
   .column,
   .columns {
     @for $i from 1 through 11 {
@@ -72,7 +72,7 @@
   }
 }
 
-/* Row */
+// Row
 @mixin row {
   width: 100%;
 

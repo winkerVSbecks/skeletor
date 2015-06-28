@@ -1,8 +1,8 @@
 
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// Buttons
+// ------------------------------------------------------------
 
-/* Base styling shared by inputs too */
+// Base styling shared by inputs too
 @mixin btn-base() {
   font-family: $btn-font;
   font-weight: $btn-font-weight;
@@ -25,7 +25,7 @@
   }
 }
 
-/* Input buttons */
+// Input buttons
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -40,7 +40,7 @@ button {
   margin-bottom: $base-spacing;
 }
 
-/* Button Generator */
+// Button Generator
 @mixin btn-gen($btn-info) {
   @include btn-base;
   background-color: map-get($btn-info, bg);
@@ -56,20 +56,20 @@ button {
 }
 
 
-/* Basic button */
+// Basic button
 button,
 .btn {
   @include btn-gen($btn);
 }
-/* Primary Button */
+// Primary Button
 .btn--primary {
   @include btn-gen($btn-primary);
 }
-/* Success Button */
+// Success Button
 .btn--success {
   @include btn-gen($btn-success);
 }
-/* Danger Button */
+// Danger Button
 .btn--danger {
   @include btn-gen($btn-danger);
 }
