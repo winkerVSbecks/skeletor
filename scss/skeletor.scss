@@ -5,9 +5,9 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 // Bourbon for mixins
-@import '../node_modules/node-bourbon/assets/stylesheets/bourbon';
-// normalize.css v3.0.2
-@import 'normalize';
+@import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
+// normalize.css
+@import '../node_modules/normalize.css/normalize.css';
 
 // Core
 @import 'variables/variables';
