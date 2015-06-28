@@ -11,11 +11,9 @@ $btn: (
   color                 : $dark-grey,
   bg                    : rgba(0, 0, 0, 0),
   border                : $dark-grey,
-  hover: (
-    color               : darken($dark-grey, 20%),
-    bg                  : rgba(0, 0, 0, 0),
-    border              : darken($dark-grey, 20%)
-  )
+  hover-color           : darken($dark-grey, 20%),
+  hover-bg              : rgba(0, 0, 0, 0),
+  hover-border          : darken($dark-grey, 20%)
 );
 
 // Primary
@@ -23,11 +21,9 @@ $btn-primary: (
   color                 : $white,
   bg                    : $primary,
   border                : $primary,
-  hover: (
-    color               : $white,
-    bg                  : darken($primary, 5%),
-    border              : darken($primary, 5%)
-  )
+  hover-color           : $white,
+  hover-bg              : darken($primary, 5%),
+  hover-border          : darken($primary, 5%)
 );
 
 // Success
@@ -35,11 +31,9 @@ $btn-success: (
   color                 : $white,
   bg                    : $success,
   border                : $success,
-  hover: (
-    color               : $white,
-    bg                  : darken($success, 5%),
-    border              : darken($success, 5%)
-  )
+  hover-color           : $white,
+  hover-bg              : darken($success, 5%),
+  hover-border          : darken($success, 5%)
 );
 
 // Danger
@@ -47,9 +41,7 @@ $btn-danger: (
   color                 : $white,
   bg                    : $danger,
   border                : $danger,
-  hover: (
-    color               : $white,
-    bg                  : darken($danger, 5%),
-    border              : darken($danger, 5%)
-  )
+  hover-color           : $white,
+  hover-bg              : darken($danger, 5%),
+  hover-border          : darken($danger, 5%)
 );
