@@ -18,7 +18,7 @@
 @mixin col($i) {
   width: 100%;
   float: left;
-  margin-bottom: 0.75*$base-spacing;
+  margin-bottom: 0.75 * $s;
 
   @media (min-width: $sm) {
     width: flex-grid($i);

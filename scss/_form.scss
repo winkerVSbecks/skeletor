@@ -2,14 +2,14 @@
 // Forms
 // ------------------------------------------------------------
 form {
-  margin-bottom: 2.5*$base-spacing;
+  margin-bottom: 2.5 * $s;
 }
 
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5*$base-spacing;
+  margin-bottom: 1.5 * $s;
 }
 
 input[type="date"],
@@ -67,7 +67,7 @@ label,
 legend {
   display: block;
   font-weight: $label-font-weight;
-  margin-bottom: 0.5*$base-spacing;
+  margin-bottom: 0.5 * $s;
 }
 
 fieldset {
@@ -83,5 +83,5 @@ input[type="radio"] {
 label > .label--body {
   display: inline-block;
   font-weight: normal;
-  margin-left: 0.5*$base-spacing;
+  margin-left: 0.5 * $s;
 }

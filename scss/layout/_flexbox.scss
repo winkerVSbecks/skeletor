@@ -1,0 +1,13 @@
+
+// Flexbox Classes
+// ------------------------------------------------------------
+.flex { @include display(flex); }
+
+.flex-column { @include flex-direction(column); }
+.flex-wrap { @include flex-wrap(wrap); }
+
+.flex-center { @include align-items(center); }
+.flex-stretch { @include align-items(stretch); }
+
+.flex-auto { @include flex(1 1); }
+.flex-grow { @include flex(1); }
