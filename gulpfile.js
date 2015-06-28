@@ -3,13 +3,11 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var colors = require('colors');
 var watch = require('gulp-watch');
-var concat = require('gulp-concat');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var minifyCss = require('gulp-minify-css');
+var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var fileinclude = require('gulp-file-include');
-var gulpIgnore = require('gulp-ignore');
 var scsslint = require('gulp-scss-lint');
 
 
@@ -22,47 +20,30 @@ gulp.task('scss-lint', function () {
 
 
 gulp.task('sass-docs', function() {
-  return sass('./scss/_docs/docs.scss', {
-      sourcemap: false,
-    })
-    .pipe(gulp.dest('./css'))
-    .pipe(minifyCss())
-    .pipe(rename({
-      extname: '.min.css'
-    }))
-    .pipe(gulp.dest('./css'))
-    .on('error', function (err) {
-      console.error(err.message);
-    })
-    .pipe(connect.reload());
+  return gulp.src('./scss/_docs/docs.scss')
+          .pipe(sourcemaps.init())
+            .pipe(sass().on('error', sass.logError))
+          .pipe(sourcemaps.write())
+          .pipe(gulp.dest('./css'))
+          .pipe(cssmin())
+          .pipe(rename({
+            extname: '.min.css'
+          }))
+          .pipe(gulp.dest('./css'));
 });
 
 
 gulp.task('sass', ['scss-lint'], function() {
-  return sass('./scss/skeletor.scss', {
-      sourcemap: true,
-    })
-    .pipe(sourcemaps.write('./', {
-      includeContent: false,
-      sourceRoot: '/scss'
-    }))
-    .pipe(gulp.dest('./css'))
-    .pipe(gulpIgnore.exclude(function(file) {
-      if (file.path.indexOf('.map') !== -1) {
-        return true;
-      } else {
-        return false;
-      }
-    }))
-    .pipe(minifyCss())
-    .pipe(rename({
-      extname: '.min.css'
-    }))
-    .pipe(gulp.dest('./css'))
-    .on('error', function (err) {
-      console.error(err.message);
-    })
-    .pipe(connect.reload());
+  return gulp.src('./scss/skeletor.scss')
+          .pipe(sourcemaps.init())
+            .pipe(sass().on('error', sass.logError))
+          .pipe(sourcemaps.write())
+          .pipe(gulp.dest('./css'))
+          .pipe(cssmin())
+          .pipe(rename({
+            extname: '.min.css'
+          }))
+          .pipe(gulp.dest('./css'));
 });
 
 

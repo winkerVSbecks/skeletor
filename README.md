@@ -11,7 +11,6 @@ bower install git@github.com:rangle/skeletor.git
 ## Development
 
 1. Install dependencies (might have to run with `sudo` or install [rvm](https://rvm.io/rvm/install) first):
-  - `gem install sass`
   - `gem install scss-lint`
   - `npm install`
 
