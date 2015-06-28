@@ -1,41 +1,23 @@
 
 // Utilities
 // ------------------------------------------------------------
-.u-full-width {
-  width: 100%;
+.u-pull-right { float: right; }
+.u-pull-left { float: left; }
+
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+
+.u-uppercase {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
-.u-max-full-width {
-  max-width: 100%;
-}
+.u-cf { @include clearfix; }
 
-.u-pull-right {
-  float: right;
-}
+.u-truncate { @include ellipsis(); }
 
-.u-pull-left {
-  float: left;
-}
-
-.u-text-center {
-  text-align: center;
-}
-
-.u-text-left {
-  text-align: left;
-}
-
-.u-text-right {
-  text-align: right;
-}
-
-%u-cf {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-%u-vertical-align {
+%u-vertical-center {
   @include transform(translate(-50%));
   position: relative;
   top: 50%;

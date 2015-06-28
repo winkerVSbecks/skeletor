@@ -1,18 +1,8 @@
 
 // Padding
 // ------------------------------------------------------------
-.p1  { padding: $s; }
-.ph1 { padding-top: $s; }
-.pv1 { padding-left: $s; }
-
-.p2  { padding: $s * 2; }
-.ph2 { padding-top: $s * 2; }
-.pv2 { padding-left: $s * 2; }
-
-.p3  { padding: $s * 3; }
-.ph3 { padding-top: $s * 3; }
-.pv3 { padding-left: $s * 3; }
-
-.p4  { padding: $s * 4; }
-.ph4 { padding-top: $s * 4; }
-.pv4 { padding-left: $s * 4; }
+@for $i from 0 through 4 {
+  .p#{$i} { padding: $s * $i; }
+  .ph#{$i} { padding-top: $s * $i; }
+  .pv#{$i} { padding-left: $s * $i; }
+}
