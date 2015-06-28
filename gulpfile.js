@@ -9,16 +9,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var fileinclude = require('gulp-file-include');
-var cssStats = require('gulp-cssstats');
 var gulpIgnore = require('gulp-ignore');
 var scsslint = require('gulp-scss-lint');
-
-
-gulp.task('cssstats', function() {
-  return gulp.src('./css/skeletor.css')
-          .pipe(cssStats())
-          .pipe(gulp.dest('./css/'));
-});
 
 
 gulp.task('scss-lint', function () {
@@ -97,9 +89,9 @@ gulp.task('dev', ['sass', 'build-docs', 'sass-docs'], function() {
   });
   console.log('[CONNECT] Listening on port 3000'.yellow.inverse);
 
-  // Watch CSS stats files for changes
+  // Watch CSS files for changes
   console.log('[CONNECT] Watching files for live-reload'.blue);
-  watch(['./index.html', './js/**/*.js', './css/stats/*'])
+  watch(['./index.html', './js/**/*.js'])
     .pipe(connect.reload());
 
   // Watch HTML files for changes
@@ -115,7 +107,6 @@ gulp.task('default', [], function() {
   console.log('***********************'.yellow);
   console.log('  dev :'.magenta, 'starts a server with live reloading and auto compiling sass'.yellow);
   console.log('  sass:'.magenta, 'compiles sass'.yellow);
-  console.log('  cssstats:'.magenta, 'calculate CSS stats'.yellow);
   console.log('***********************'.yellow);
   return true;
 });
