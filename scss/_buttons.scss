@@ -41,17 +41,17 @@ button {
 }
 
 // Button Generator
-@mixin btn-gen($btn-info) {
+@mixin btn-gen($color, $bg, $border, $hover-color, $hover-bg, $hover-border) {
   @include btn-base;
-  background-color: map-get($btn-info, bg);
-  color: map-get($btn-info, color);
-  border: 1px solid map-get($btn-info, border);
+  background-color: $bg;
+  color: $color;
+  border: 1px solid $border;
 
   &:hover,
   &:focus {
-    background-color: map-get(map-get($btn-info, hover), bg);
-    border-color: map-get(map-get($btn-info, hover), border);
-    color: map-get(map-get($btn-info, hover), color);
+    background-color: $hover-bg;
+    border-color: $hover-border;
+    color: $hover-color;
   }
 }
 
@@ -59,17 +59,17 @@ button {
 // Basic button
 button,
 .btn {
-  @include btn-gen($btn);
+  @include btn-gen($btn...);
 }
 // Primary Button
 .btn--primary {
-  @include btn-gen($btn-primary);
+  @include btn-gen($btn-primary...);
 }
 // Success Button
 .btn--success {
-  @include btn-gen($btn-success);
+  @include btn-gen($btn-success...);
 }
 // Danger Button
 .btn--danger {
-  @include btn-gen($btn-danger);
+  @include btn-gen($btn-danger...);
 }
