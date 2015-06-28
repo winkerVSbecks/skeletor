@@ -13,7 +13,7 @@ linters:
     enabled: true
 
   Comment:
-    enabled: false
+    enabled: true
 
   DebugStatement:
     enabled: true

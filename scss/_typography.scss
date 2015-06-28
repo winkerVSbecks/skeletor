@@ -1,7 +1,6 @@
 
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+// Typography
+// ------------------------------------------------------------
 h1,
 h2,
 h3,
@@ -51,7 +50,7 @@ h6 {
 }
 
 
-/* Larger than phablet */
+// Larger than phablet
 @media (min-width: $sm) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
