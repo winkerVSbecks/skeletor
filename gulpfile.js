@@ -20,7 +20,7 @@ gulp.task('scss-lint', function () {
 
 
 gulp.task('sass-docs', function() {
-  return gulp.src('./scss/_docs/docs.scss')
+  return gulp.src('./docs-scss/docs.scss')
           .pipe(sourcemaps.init())
             .pipe(sass().on('error', sass.logError))
           .pipe(sourcemaps.write())
