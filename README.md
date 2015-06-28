@@ -18,12 +18,9 @@ bower install git@github.com:rangle/skeletor.git
   - `sass`: compile Sass
   - `docs`: build the documentation
   - `scss-lint`: run the SCSS linter
-  - `cssstats`: generates the css statistics
   - `dev`: start a simple node server, build docs and compile Sass
 
 3. Go to [http://localhost:3000](http://localhost:3000) for the documentation
-
-4. Go to [http://localhost:3000/css/stats](http://localhost:3000/css/stats) for the visualization of the CSS stats
 
 
 ## Attribution

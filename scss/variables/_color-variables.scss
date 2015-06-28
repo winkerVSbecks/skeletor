@@ -9,9 +9,10 @@ $lighter-grey           : #ecf0f1 !default;
 $light-grey             : #bdc3c7 !default;
 $dark-grey              : #95a5a6 !default;
 $black                  : #222 !default;
+$white                  : #fff !default;
 
-$body-color            : $black !default;
-$body-bg                : #fff !default;
+$body-color             : $black !default;
+$body-bg                : $white !default;
 
-$anchor-color          : $primary !default;
-$anchor-color-hover    : darken($primary, 10%) !default;
+$anchor-color           : $primary !default;
+$anchor-color-hover     : darken($primary, 10%) !default;
