@@ -2,35 +2,20 @@
 // Forms
 // ------------------------------------------------------------
 form {
-  margin-bottom: 2.5 * $s;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5 * $s;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.75;
+  margin-bottom: 0;
 }
 
-input[type="date"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea,
-select {
-  background-color: $white;
-  border: 1px solid $light-grey;
-  border-radius: $base-radius;
-  box-shadow: none;
-  height: 38px;
-  // The 6px vertically centers text on FF, ignored by Webkit
-  padding: 6px 10px;
-}
-// Removes awkard default styles on some inputs for iOS
 input[type="date"],
 input[type="email"],
 input[type="number"],
@@ -41,12 +26,19 @@ input[type="url"],
 input[type="password"],
 textarea {
   @include appearance(none);
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: $base-radius;
+  box-shadow: none;
+  height: 4rem;
+  // The 6px vertically centers text on FF, ignored by Webkit
+  padding: $s;
 }
 
 textarea {
-  min-height: 65px;
-  padding-bottom: 6px;
-  padding-top: 6px;
+  min-height: 8rem;
+  padding-bottom: $s;
+  padding-top: $s;
 }
 
 input[type="date"]:focus,
@@ -63,25 +55,32 @@ select:focus {
   outline: 0;
 }
 
+select {
+  @include appearance(none);
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: $base-radius;
+  box-shadow: none;
+  padding: $s;
+}
+
+select:not([multiple]) {
+  height: 4rem;
+  vertical-align: middle;
+}
+
 label,
 legend {
   display: block;
   font-weight: $label-font-weight;
-  margin-bottom: 0.5 * $s;
+  margin-bottom: 0;
 }
 
 fieldset {
   border-width: 0;
-  padding: 0;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-}
-
-label > .label--body {
-  display: inline-block;
-  font-weight: normal;
-  margin-left: 0.5 * $s;
 }

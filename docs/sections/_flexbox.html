@@ -3,7 +3,7 @@
   <h6 class="u-uppercase">Flexbox</h6>
   <p>The Flexbox Layout module provides a more efficient way to construct layouts. The core idea behind it is to allow the container to alter the width, height and order of it's child elements to maintain the expected layout. It can expand items to fill the available space or shrink them to prevent overflow.</p>
 
-  <p>Bourbon provides an exhaustive set of <a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_flex-box.scss" target="_blank">flexbox mixins</a>. Beyond that Skeletor provides a few utility classes to handle some common use cases.</p>
+  <p>Bourbon provides an exhaustive set of <a href="https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_flex-box.scss" target="_blank">flexbox mixins</a>. Beyond that Skeletor provides a set of utility classes.</p>
 
 <!-- Code Example -->
 <pre>
@@ -19,5 +19,66 @@
 .flex-grow { flex: 1; }
 </code>
 </pre>
+
+  <p>Pair them with these grid classes to handle most common layout scenarios.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Rules</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="u-italic">.col-1</td>
+        <td>box-sizing: border-box; width: 8.33333%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-2</td>
+        <td>box-sizing: border-box; width: 16.66667%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-3</td>
+        <td>box-sizing: border-box; width: 25%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-4</td>
+        <td>box-sizing: border-box; width: 33.33333%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-5</td>
+        <td>box-sizing: border-box; width: 41.66667%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-6</td>
+        <td>box-sizing: border-box; width: 50%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-7</td>
+        <td>box-sizing: border-box; width: 58.33333%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-8</td>
+        <td>box-sizing: border-box; width: 66.66667%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-9</td>
+        <td>box-sizing: border-box; width: 75%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-10</td>
+        <td>box-sizing: border-box; width: 83.33333%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-11</td>
+        <td>box-sizing: border-box; width: 91.66667%;</td>
+      </tr>
+      <tr>
+        <td class="u-italic">.col-12</td>
+        <td>box-sizing: border-box; width: 100%;</td>
+      </tr>
+    </tbody>
+  </table>
 
 </section>

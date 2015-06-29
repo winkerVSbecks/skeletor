@@ -49,10 +49,10 @@ code {
 
 pre > code {
   border: 1px solid $light-grey;
-  border-radius: $base-radius;
+  border-radius: 4px;
   display: block;
-  padding: 2rem;
   overflow-x: scroll;
+  padding: 2rem;
   white-space: pre;
 }
 
