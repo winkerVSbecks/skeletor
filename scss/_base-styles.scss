@@ -34,25 +34,12 @@ a {
   }
 }
 
-
+dl,
 ol,
 ul {
+  margin-bottom: 2 * $s;
   margin-top: 0;
-  padding-left: 0;
 }
-
-ul { list-style: circle inside; }
-
-ol { list-style: decimal inside; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5 * $s 0 1.5 * $s 3 * $s;
-}
-
-// li { margin-bottom: $s; }
 
 code {
   font-family: Menlo, monospace;
