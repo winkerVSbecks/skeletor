@@ -31,8 +31,8 @@ textarea {
   border-radius: $base-radius;
   box-shadow: none;
   height: 4rem;
-  // The 6px vertically centers text on FF, ignored by Webkit
   padding: $s;
+  vertical-align: middle;
 }
 
 textarea {
