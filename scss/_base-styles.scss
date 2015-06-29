@@ -49,34 +49,32 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  font-size: 90%;
   margin: 1.5 * $s 0 1.5 * $s 3 * $s;
 }
 
-li { margin-bottom: $s; }
+// li { margin-bottom: $s; }
 
 code {
-  background: $lighter-grey;
-  border: 1px solid $light-grey;
-  border-radius: $base-radius;
-  font-size: 90%;
-  margin: 0 0.2rem;
-  padding: 0.2rem 0.5rem;
+  font-family: Menlo, monospace;
+  margin: 0;
   white-space: nowrap;
 }
 
 pre > code {
+  border: 1px solid $light-grey;
+  border-radius: $base-radius;
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 2rem;
   white-space: pre;
+  overflow-x: scroll;
 }
 
 
 hr {
   border-top: 1px solid $light-grey;
   border-width: 0;
-  margin-bottom: 3.5 * $s;
-  margin-top: 3 * $s;
+  margin-bottom: 2 * $s;
+  margin-top: 2 * $s;
 }
 
 table {
@@ -101,7 +99,7 @@ table,
 p,
 ul,
 ol {
-  margin-bottom: 2.5 * $s;
+  margin-bottom: 2 * $s;
 }
 
 p { margin-top: 0; }

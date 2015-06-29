@@ -2,7 +2,7 @@ var rem;
 
 $(document).ready(function() {
 
-  var $codeSnippets = $('.code-example__body')
+  var $codeSnippets = $('.prettyprint')
   rem = calcRem();
 
   // Conver to code snippets

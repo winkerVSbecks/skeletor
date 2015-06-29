@@ -66,7 +66,7 @@ gulp.task('dev', ['sass', 'build-docs'], function() {
 
   // Watch Sass files for changes
   console.log('[CONNECT] Watching SASS files'.blue);
-  gulp.watch('./scss/**/*.scss', ['sass', 'sass-docs']);
+  gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
 
