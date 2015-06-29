@@ -2,7 +2,8 @@
 // Layout Variables
 // ------------------------------------------------------------
 // Base Metrics
-$s                      : 1rem !default;
+$s                      : 0.5rem !default;
+$scale                  : 0.5rem, 1rem, 2rem, 4rem !default;
 $base-radius            : 4px !default;
 
 // Media Queries

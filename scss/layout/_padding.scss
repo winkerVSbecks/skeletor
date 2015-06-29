@@ -1,8 +1,12 @@
 
 // Padding
 // ------------------------------------------------------------
-@for $i from 0 through 4 {
-  .p#{$i} { padding: $s * $i; }
-  .ph#{$i} { padding-top: $s * $i; }
-  .pv#{$i} { padding-left: $s * $i; }
+.p0 { padding: 0; }
+.ph0 { padding-top: 0; }
+.pv0 { padding-left: 0; }
+
+@for $i from 1 through 4 {
+  .p#{$i} { padding: nth($scale, $i); }
+  .ph#{$i} { padding-top: nth($scale, $i); }
+  .pv#{$i} { padding-left: nth($scale, $i); }
 }

@@ -1,12 +1,18 @@
 
 // Margin
 // ------------------------------------------------------------
-@for $i from 0 through 4 {
-  .m#{$i} { margin: $s * $i; }
-  .mt#{$i} { margin-top: $s * $i; }
-  .mr#{$i} { margin-right: $s * $i; }
-  .mb#{$i} { margin-bottom: $s * $i; }
-  .ml#{$i} { margin-left: $s * $i; }
+.m0 { margin: 0; }
+.mt0 { margin-top: 0; }
+.mr0 { margin-right: 0; }
+.mb0 { margin-bottom: 0; }
+.ml0 { margin-left: 0; }
+
+@for $i from 1 through 4 {
+  .m#{$i} { margin: nth($scale, $i); }
+  .mt#{$i} { margin-top: nth($scale, $i); }
+  .mr#{$i} { margin-right: nth($scale, $i); }
+  .mb#{$i} { margin-bottom: nth($scale, $i); }
+  .ml#{$i} { margin-left: nth($scale, $i); }
 }
 
 .m-auto {

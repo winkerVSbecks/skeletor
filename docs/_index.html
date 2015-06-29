@@ -18,29 +18,24 @@
   <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
-<body class="code-snippets-visible">
+<body class="container p2">
 
-  <!-- Primary Page Layout -->
-  <div class="container">
+  <header class="header">
+    <img class="header__logo" src="img/skeletor.png" alt="Skeletor">
+    <h2>Skeletor: The Sassy Skeleton</h2>
+  </header>
 
-    <section class="header">
-      <img class="header__logo" src="img/skeletor.png" alt="Skeletor">
-      <h2>Skeletor: The Sassy Skeleton</h2>
-    </section>
-
-    @@include('sections/_grid-mixins.html')
-    @@include('sections/_flexbox.html')
-    @@include('sections/_typography.html')
-    @@include('sections/_buttons.html')
-    @@include('sections/_forms.html')
-    @@include('sections/_lists.html')
-    @@include('sections/_tables.html')
-    @@include('sections/_media-queries.html')
-    @@include('sections/_utilities.html')
-    @@include('sections/_code.html')
-    @@include('sections/_linting.html')
-
-  </div>
+  @@include('sections/_typography.html')
+  @@include('sections/_white-space.html')
+  @@include('sections/_flexbox.html')
+  @@include('sections/_buttons.html')
+  @@include('sections/_forms.html')
+  @@include('sections/_lists.html')
+  @@include('sections/_tables.html')
+  @@include('sections/_media-queries.html')
+  @@include('sections/_utilities.html')
+  @@include('sections/_code.html')
+  @@include('sections/_linting.html')
 
   <!-- scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
