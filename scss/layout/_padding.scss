@@ -2,11 +2,27 @@
 // Padding
 // ------------------------------------------------------------
 .p0 { padding: 0; }
-.ph0 { padding-top: 0; }
-.pv0 { padding-left: 0; }
+
+.ph0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pv0 {
+  padding-bottom: 0;
+  padding-top: 0;
+}
 
 @for $i from 1 through 4 {
   .p#{$i} { padding: nth($scale, $i); }
-  .ph#{$i} { padding-top: nth($scale, $i); }
-  .pv#{$i} { padding-left: nth($scale, $i); }
+
+  .ph#{$i} {
+    padding-left: nth($scale, $i);
+    padding-right: nth($scale, $i);
+  }
+
+  .pv#{$i} {
+    padding-bottom: nth($scale, $i);
+    padding-top: nth($scale, $i);
+  }
 }

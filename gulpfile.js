@@ -19,20 +19,6 @@ gulp.task('scss-lint', function () {
 });
 
 
-gulp.task('sass-docs', function() {
-  return gulp.src('./docs/scss/docs.scss')
-          .pipe(sourcemaps.init())
-            .pipe(sass().on('error', sass.logError))
-          .pipe(sourcemaps.write())
-          .pipe(gulp.dest('./css'))
-          .pipe(cssmin())
-          .pipe(rename({
-            extname: '.min.css'
-          }))
-          .pipe(gulp.dest('./css'));
-});
-
-
 gulp.task('sass', ['scss-lint'], function() {
   return gulp.src('./scss/skeletor.scss')
           .pipe(sourcemaps.init())
@@ -61,7 +47,7 @@ gulp.task('build-docs', function() {
 });
 
 
-gulp.task('dev', ['sass', 'build-docs', 'sass-docs'], function() {
+gulp.task('dev', ['sass', 'build-docs'], function() {
   // Start a server
   connect.server({
     root: '',
