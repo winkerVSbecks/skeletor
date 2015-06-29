@@ -37,7 +37,7 @@ a {
 dl,
 ol,
 ul {
-  margin-bottom: 2 * $s;
+  margin-bottom: 1rem;
   margin-top: 0;
 }
 
@@ -52,16 +52,16 @@ pre > code {
   border-radius: $base-radius;
   display: block;
   padding: 2rem;
-  white-space: pre;
   overflow-x: scroll;
+  white-space: pre;
 }
 
 
 hr {
   border-top: 1px solid $light-grey;
   border-width: 0;
-  margin-bottom: 2 * $s;
-  margin-top: 2 * $s;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 table {
@@ -86,7 +86,7 @@ table,
 p,
 ul,
 ol {
-  margin-bottom: 2 * $s;
+  margin-bottom: 1rem;
 }
 
 p { margin-top: 0; }
