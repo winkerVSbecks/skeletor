@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/skeletor.min.css">
   <style type="text/css">
     .header {
+      border-bottom: 1px solid #eee;
       margin-top: 6rem;
       text-align: center;
     }
@@ -23,15 +24,10 @@
     }
 
     .header__logo {
-      margin-bottom: 1rem;
+      /*margin-bottom: 1rem;*/
       max-width: 300px;
       width: 100%;
     }
-
-    section {
-      border-top: 1px solid #eee;
-    }
-
     /* Tomorrow Theme */
     .pln {
       color: #4d4d4c;
@@ -170,9 +166,9 @@
 
 <body class="container p2">
 
-  <header class="header mb4">
+  <header class="header mb2">
     <img class="header__logo" src="img/skeletor.png" alt="Skeletor">
-    <h2>Skeletor: The Sassy Skeleton</h2>
+    <h1 class="mt0">Skeletor: The Sassy Skeleton</h1>
   </header>
 
   @@include('sections/_typography.html')

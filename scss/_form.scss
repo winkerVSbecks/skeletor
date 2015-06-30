@@ -12,7 +12,7 @@ select,
 fieldset {
   font-family: inherit;
   font-size: inherit;
-  line-height: 1.75;
+  line-height: 1.6;
   margin-bottom: 0;
 }
 
@@ -25,12 +25,11 @@ input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea {
-  @include appearance(none);
   background-color: $white;
   border: 1px solid $light-grey;
   border-radius: $base-radius;
   box-shadow: none;
-  height: 4rem;
+  height: 2.25rem;
   padding: $s;
   vertical-align: middle;
 }
@@ -56,7 +55,6 @@ select:focus {
 }
 
 select {
-  @include appearance(none);
   background-color: $white;
   border: 1px solid $light-grey;
   border-radius: $base-radius;
@@ -65,13 +63,11 @@ select {
 }
 
 select:not([multiple]) {
-  height: 4rem;
+  height: 2.25rem;
   vertical-align: middle;
 }
 
-label,
 legend {
-  display: block;
   font-weight: $label-font-weight;
   margin-bottom: 0;
 }
